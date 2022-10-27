@@ -2,54 +2,72 @@
 @tailwind components;
 
 @layer components {
-  :root {
-    --bg-color: rgb(20, 20, 20);
-    --card-color: rgb(23, 23, 23);
-  }
-  
-  #cards:hover > .card::after {
-    @apply opacity-[1]
-  }
-  
-  .card {
-    @apply w-[300px] h-[260px] flex cursor-pointer relative flex-col rounded-[10px] bg-[rgba(255,255,255,0.1)]
-  }
-  
-  .card:hover::before {
-    @apply opacity-[1]
-  }
-  
-  .card::before,
-  .card::after {
+	:root {
+		--bg-color: rgb(10, 10, 10);
+		--card-color: rgb(20, 20, 20);
+	}
+
+	#cards:hover > .card::after {
+		@apply opacity-[1];
+	}
+
+	.card {
+    transition: all 200ms ease-in-out 0s;
+		@apply h-[180px] md:h-[220px] lg:h-[260px] flex cursor-pointer relative flex-col rounded-[12px] bg-[rgba(255,255,255,0.1)]
+	}
+
+	.card:hover::before {
+		@apply opacity-[1];
+	}
+
+	.card::before,
+	.card::after {
     transition: opacity 400ms ease 0s;
-    @apply w-full h-full top-0 left-0 opacity-0 absolute content-[''] rounded-[inherit]
+		@apply w-full h-full top-0 left-0 opacity-0 absolute content-[''] rounded-[inherit];
+	}
+
+	.card::before {
+		background: radial-gradient(
+			800px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.06),
+			transparent 40%
+		);
+		z-index: 3;
+	}
+
+	.card::after {
+		background: radial-gradient(
+			600px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.4),
+			transparent 40%
+		);
+		z-index: 1;
+	}
+
+	.card > .card-content {
+		@apply bg-[color:var(--card-color)] rounded-[inherit] flex flex-col flex-grow-[1] inset-[1px] p-[10px] absolute z-[2];
+	}
+
+  .card-img {
+    @apply w-full max-w-[200px] mx-auto
   }
-  
-  .card::before {
-    background: radial-gradient(
-      800px circle at var(--mouse-x) var(--mouse-y), 
-      rgba(255, 255, 255, 0.06),
-      transparent 40%
-    );
-    z-index: 3;
+
+  .card-desc {
+    @apply  flex flex-col text-center gap-1
   }
-  
-  .card::after {  
-    background: radial-gradient(
-      600px circle at var(--mouse-x) var(--mouse-y), 
-      rgba(255, 255, 255, 0.4),
-      transparent 40%
-    );
-    z-index: 1;
+
+  .card-title {
+    @apply text-slate-300 font-['Title'] text-sm
   }
-  
-  .card > .card-content {
-    @apply bg-[color:var(--card-color)] rounded-[inherit] flex flex-col flex-grow-[1] inset-[1px] p-[10px] absolute z-[2]
+
+  .card-message {
+    @apply text-slate-400 font-['Desc'] text-xs max-w-[80%] mx-auto
   }
+
+
 }
 
 @tailwind utilities;
-
 
 /* backdrop-filter: blur(12px);
 -webkit-mask-image: linear-gradient(to bottom,black var(--header-height),transparent); */

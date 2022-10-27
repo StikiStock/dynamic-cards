@@ -21,17 +21,36 @@
 
     <title>Dynamic Cards</title>
 
+    <style>
+      @font-face {
+        font-family: 'Title';
+        src: url(./util/fonts/Poppins-SemiBold.ttf);
+      }
+      @font-face {
+        font-family: 'Desc';
+        src: url(./util/fonts/Poppins-Regular.ttf);
+      }
+    </style>
+
     <script defer src="./app.js"></script>
 
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-[color:var(--bg-color)] p-0 m-0 w-full h-screen overflow-hidden flex items-center justify-center">
+  <body class="bg-[color:var(--bg-color)] p-0 m-0 w-full h-screen flex items-center justify-center">
     
-  <div class="flex flex-wrap gap-[8px] w-[calc(100%-20px)] max-w-[916px]" id="cards">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-[8px] w-[calc(100%-20px)] max-w-[916px] mx-[24px]" id="cards">
     
     <div class="card">
-      <div class="card-content"></div>
+      <div class="card-content">
+        <div class="flex flex-col justify-between w-full my-auto">
+          <img class="card-img" src="util/img/shield_svgmap.webp"/>
+          <div class="card-desc">
+            <div class="card-title">Your Security</div>
+            <div class="card-message">Sure as hell it matters.</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="card">

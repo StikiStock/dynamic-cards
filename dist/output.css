@@ -552,8 +552,8 @@ video {
 }
 
 :root {
-  --bg-color: rgb(20, 20, 20);
-  --card-color: rgb(23, 23, 23);
+  --bg-color: rgb(10, 10, 10);
+  --card-color: rgb(20, 20, 20);
 }
 
 #cards:hover > .card::after {
@@ -561,14 +561,26 @@ video {
 }
 
 .card {
+  transition: all 200ms ease-in-out 0s;
   position: relative;
   display: flex;
-  height: 260px;
-  width: 300px;
+  height: 180px;
   cursor: pointer;
   flex-direction: column;
-  border-radius: 10px;
-  background-color: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1)
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    height: 260px;
+  }
 }
 
 .card:hover::before {
@@ -576,7 +588,7 @@ video {
 }
 
 .card::before,
-  .card::after {
+	.card::after {
   transition: opacity 400ms ease 0s;
   position: absolute;
   top: 0px;
@@ -586,24 +598,24 @@ video {
   border-radius: inherit;
   opacity: 0;
   --tw-content: '';
-  content: var(--tw-content)
+  content: var(--tw-content);
 }
 
 .card::before {
   background: radial-gradient(
-      800px circle at var(--mouse-x) var(--mouse-y), 
-      rgba(255, 255, 255, 0.06),
-      transparent 40%
-    );
+			800px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.06),
+			transparent 40%
+		);
   z-index: 3;
 }
 
 .card::after {
   background: radial-gradient(
-      600px circle at var(--mouse-x) var(--mouse-y), 
-      rgba(255, 255, 255, 0.4),
-      transparent 40%
-    );
+			600px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.4),
+			transparent 40%
+		);
   z-index: 1;
 }
 
@@ -622,12 +634,59 @@ video {
   padding: 10px;
 }
 
+.card-img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.card-title {
+  font-family: 'Title';
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+.card-message {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  font-family: 'Desc';
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
 .m-0 {
   margin: 0px;
 }
 
+.mx-\[24px\] {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .h-screen {
@@ -646,8 +705,12 @@ video {
   max-width: 916px;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -658,16 +721,12 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-\[8px\] {
   gap: 8px;
-}
-
-.gap-\[2px\] {
-  gap: 2px;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .bg-\[color\:var\(--bg-color\)\] {
@@ -680,3 +739,9 @@ video {
 
 /* backdrop-filter: blur(12px);
 -webkit-mask-image: linear-gradient(to bottom,black var(--header-height),transparent); */
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
