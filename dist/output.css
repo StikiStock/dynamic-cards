@@ -552,8 +552,7 @@ video {
 }
 
 :root {
-  --bg-color: rgb(10, 10, 10);
-  --card-color: rgb(20, 20, 20);
+  --bg-color: rgb(7, 7, 7);
 }
 
 #cards:hover > .card::after {
@@ -567,8 +566,7 @@ video {
   height: 180px;
   cursor: pointer;
   flex-direction: column;
-  border-radius: 12px;
-  background-color: rgba(255,255,255,0.1)
+  border-radius: 12px
 }
 
 @media (min-width: 768px) {
@@ -630,8 +628,17 @@ video {
   flex-grow: 1;
   flex-direction: column;
   border-radius: inherit;
-  background-color: var(--card-color);
+  background-color: var(--bg-color);
   padding: 10px;
+}
+
+.card-content-wrapper {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-img {
@@ -643,9 +650,11 @@ video {
 
 .card-desc {
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   flex-direction: column;
-  gap: 0.25rem;
-  text-align: center;
+  gap: 0.5rem;
 }
 
 .card-title {
@@ -657,14 +666,12 @@ video {
 }
 
 .card-message {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80%;
   font-family: 'Desc';
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+  opacity: 0.5;
 }
 
 .m-0 {
@@ -676,9 +683,8 @@ video {
   margin-right: 24px;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .flex {
@@ -693,12 +699,20 @@ video {
   height: 100vh;
 }
 
+.h-\[16px\] {
+  height: 16px;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-\[calc\(100\%-20px\)\] {
   width: calc(100% - 20px);
+}
+
+.w-\[16px\] {
+  width: 16px;
 }
 
 .max-w-\[916px\] {
@@ -709,8 +723,8 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.flex-col {
-  flex-direction: column;
+.flex-row {
+  flex-direction: row;
 }
 
 .items-center {
@@ -719,10 +733,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .gap-\[8px\] {
