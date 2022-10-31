@@ -3,7 +3,7 @@
 
 @layer components {
 	:root {
-		--bg-color: rgb(7, 7, 7);
+		--bg-color: #060606;
 	}
 
 	#cards:hover > .card::after {
@@ -12,7 +12,7 @@
 
 	.card {
     transition: all 200ms ease-in-out 0s;
-		@apply h-[180px] md:h-[220px] lg:h-[260px] flex cursor-pointer relative flex-col rounded-[12px] 
+		@apply h-[180px] md:h-[220px] lg:h-[260px] flex cursor-pointer relative flex-col rounded-[12px] bg-[#ffffff0c]
 	}
 
 	.card:hover::before {
@@ -48,23 +48,31 @@
 	}
 
 	.card-content-wrapper {
-		@apply flex flex-col justify-between w-full my-auto
+		@apply flex flex-col justify-between w-full my-auto overflow-hidden gap-2 md:gap-5
 	}
 
 	.card-img {
-		@apply w-full max-w-[200px] mx-auto
+		@apply w-full max-w-[120px] md:max-w-[180px] lg:max-w-[240px] mx-auto
 	}
 
 	.card-desc {
-		@apply  flex flex-col gap-2 w-fit
+		@apply flex flex-row justify-center max-w-[80%] mx-auto
+	}
+
+	.card-icon {
+		@apply w-[16px] h-[16px] m-[0.1rem_0.5rem_0.5rem_0rem]
+	}
+
+	.card-desc-wrapper {
+		@apply  flex flex-col gap-1 w-fit
 	}
 
 	.card-title {
-		@apply text-slate-300 font-['Title'] text-sm
+		@apply text-slate-300 opacity-60 font-['Title'] text-sm
 	}
 
 	.card-message {
-		@apply text-slate-300 opacity-50 font-['Desc'] text-xs
+		@apply text-slate-300 opacity-50 font-['Desc'] text-xs hyphens-auto
 	}
 
 }
