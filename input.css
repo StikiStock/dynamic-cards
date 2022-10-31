@@ -6,13 +6,22 @@
 		--bg-color: #060606;
 	}
 
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
 	#cards:hover > .card::after {
 		@apply opacity-[1];
 	}
 
 	.card {
     transition: all 200ms ease-in-out 0s;
-		@apply h-[180px] md:h-[220px] lg:h-[260px] flex cursor-pointer relative flex-col rounded-[12px] bg-[#ffffff0c]
+		@apply h-[180px] md:h-[220px] lg:h-[260px] flex cursor-pointer relative flex-col rounded-[12px] bg-[#ffffff0c] 
 	}
 
 	.card:hover::before {
@@ -44,7 +53,7 @@
 	}
 
 	.card > .card-content {
-		@apply bg-[color:var(--bg-color)] rounded-[inherit] flex flex-col flex-grow-[1] inset-[1px] p-[10px] absolute z-[2];
+		@apply bg-[color:var(--bg-color)] rounded-[inherit] flex flex-col flex-grow-[1] inset-[1px] p-[10px] absolute z-[2]
 	}
 
 	.card-content-wrapper {
@@ -56,7 +65,7 @@
 	}
 
 	.card-desc {
-		@apply flex flex-row justify-center max-w-[80%] mx-auto
+		@apply flex flex-row justify-center max-w-[80%] mx-auto -translate-x-[0px] md:-translate-x-[12px]
 	}
 
 	.card-icon {
@@ -72,7 +81,14 @@
 	}
 
 	.card-message {
-		@apply text-slate-300 opacity-50 font-['Desc'] text-xs hyphens-auto
+		@apply text-slate-300 opacity-50 font-['Desc'] text-xs
+	}
+	
+	p {
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
 	}
 
 }

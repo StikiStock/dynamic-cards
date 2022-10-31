@@ -1,12 +1,10 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="author" content="Arya Azizi" />
     <meta name="designer" content="Arya Azizi" />
     <meta name="description" content="" />
-    <meta
-      name="keywords"
-      content=""
-    />
+    <meta name="keywords" content="" />
 
     <meta name="title" content="" />
 
@@ -14,20 +12,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      property="og:image"
-      content=""
-    />
+    <meta property="og:image" content="" />
 
     <title>Dynamic Cards</title>
 
     <style>
       @font-face {
-        font-family: 'Title';
+        font-family: "Title";
         src: url(./util/fonts/Poppins-SemiBold.ttf);
       }
+
       @font-face {
-        font-family: 'Desc';
+        font-family: "Desc";
         src: url(./util/fonts/Poppins-Regular.ttf);
       }
     </style>
@@ -37,131 +33,142 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-[color:var(--bg-color)] p-0 m-0 w-full h-screen flex items-center justify-center">
-    
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-[8px] w-[calc(100%-20px)] max-w-[916px] mx-[24px]" id="cards">
-    
-    <div class="card">
-      <div class="card-content">
+  <body
+    class="bg-[color:var(--bg-color)] p-0 m-0 w-full h-screen flex items-center justify-center"
+  >
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 gap-[8px] w-[calc(100%-20px)] max-w-[916px] mx-[12px]"
+      id="cards"
+    >
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-wrapper">
+            <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
+            <div class="card-desc">
+              <img class="card-icon" src="util/img/svg/swords.svg" />
 
-        <div class="card-content-wrapper">
-          <img class="card-img" src="util/img/svg/lock_svgmap.webp"/>
-          <div class="card-desc">
-
-            <img class="card-icon" src="util/img/svg/swords.svg"/>
-
-            <div class="card-desc-wrapper">
-              <div class="card-title">Title</div>
-              <p class="card-message">A Short Description</p>
+              <div class="card-desc-wrapper">
+                <div class="card-title">Title</div>
+                <p class="card-message">A Short Description</p>
+              </div>
             </div>
-
           </div>
         </div>
+      </div>
 
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-wrapper">
+            <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
+            <div class="card-desc">
+              <img class="card-icon" src="util/img/svg/swords.svg" />
+
+              <div class="card-desc-wrapper">
+                <div class="card-title">Title</div>
+                <p class="card-message">A Short Description About Us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-wrapper">
+            <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
+            <div class="card-desc">
+              <img class="card-icon" src="util/img/svg/swords.svg" />
+
+              <div class="card-desc-wrapper">
+                <div class="card-title">Title</div>
+                <p class="card-message">A Short Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-wrapper">
+            <img class="card-img" src="util/img/svg/shield_svgmap.webp" />
+            <div class="card-desc">
+              <img class="card-icon" src="util/img/svg/swords.svg" />
+
+              <div class="card-desc-wrapper">
+                <div class="card-title">Title</div>
+                <p class="card-message">A Short Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-wrapper">
+            <img class="card-img" src="util/img/svg/shield_svgmap.webp" />
+            <div class="card-desc">
+              <img class="card-icon" src="util/img/svg/swords.svg" />
+
+              <div class="card-desc-wrapper">
+                <div class="card-title">Title</div>
+                <p class="card-message">A Short Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-content-wrapper">
+            <img class="card-img" src="util/img/svg/shield_svgmap.webp" />
+            <div class="card-desc">
+              <img class="card-icon" src="util/img/svg/swords.svg" />
+
+              <div class="card-desc-wrapper">
+                <div class="card-title">Title</div>
+                <p class="card-message">A Short Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-content">
-
-        <div class="card-content-wrapper">
-          <img class="card-img" src="util/img/svg/lock_svgmap.webp"/>
-          <div class="card-desc">
-
-            <img class="card-icon" src="util/img/svg/swords.svg"/>
-
-            <div class="card-desc-wrapper">
-              <div class="card-title">Title</div>
-              <p class="card-message">A Short Description</p>
-            </div>
-
+    <div
+      class="bg-[#0000005d] inset-0 absolute w-full h-full z-10 backdrop-blur-sm hidden animate-[fadeIn_200ms_ease-in]"
+      id="popUp"
+    ></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[450px] bg-[#181818] z-10 rounded-md border border-[#232323] hidden animate-[fadeIn_200ms_ease-in]"
+      id="popUpCard"
+    >
+      <div class="flex flex-col h-full relative top-1/2 -translate-y-1/2">
+        <img
+          class="bg-cover bg-no-repeat bg-[center_center] border-b border-b-[#232323] rounded-t-md"
+          src="util/img/blackbg.webp"
+          id="popImg"
+        />
+        <div class="px-5 my-auto">
+          <div class="text-lg font-['Title'] text-[#76868f] my-2" id="popTitle">
+            A Fine Ass Title
           </div>
-        </div>
 
+          <p
+            class="text-sm font-['Desc'] text-[#627077] text-justify my-2 max-w-[280px] mx-auto"
+            id="popDesc"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+        </div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="card-content">
-
-        <div class="card-content-wrapper">
-          <img class="card-img" src="util/img/svg/lock_svgmap.webp"/>
-          <div class="card-desc">
-
-            <img class="card-icon" src="util/img/svg/swords.svg"/>
-
-            <div class="card-desc-wrapper">
-              <div class="card-title">Title</div>
-              <p class="card-message">A Short Description</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-
-        <div class="card-content-wrapper">
-          <img class="card-img" src="util/img/svg/shield_svgmap.webp"/>
-          <div class="card-desc">
-
-            <img class="card-icon" src="util/img/svg/swords.svg"/>
-
-            <div class="card-desc-wrapper">
-              <div class="card-title">Title</div>
-              <p class="card-message">A Short Description</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-
-        <div class="card-content-wrapper">
-          <img class="card-img" src="util/img/svg/shield_svgmap.webp"/>
-          <div class="card-desc">
-
-            <img class="card-icon" src="util/img/svg/swords.svg"/>
-
-            <div class="card-desc-wrapper">
-              <div class="card-title">Title</div>
-              <p class="card-message">A Short Description</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-
-        <div class="card-content-wrapper">
-          <img class="card-img" src="util/img/svg/shield_svgmap.webp"/>
-          <div class="card-desc">
-
-            <img class="card-icon" src="util/img/svg/swords.svg"/>
-
-            <div class="card-desc-wrapper">
-              <div class="card-title">Title</div>
-              <p class="card-message">A Short Description</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
   </body>
 </html>
