@@ -587,7 +587,7 @@ video {
   cursor: pointer;
   flex-direction: column;
   border-radius: 12px;
-  background-color: #ffffff0c
+  background-color: rgba(255,255,255,0.12)
 }
 
 @media (min-width: 768px) {
@@ -621,18 +621,23 @@ video {
 }
 
 .card::before {
-  background: radial-gradient(
+  /* background: radial-gradient(
 			800px circle at var(--mouse-x) var(--mouse-y),
 			rgba(255, 255, 255, 0.06),
 			transparent 40%
-		);
+		); */
+  background: radial-gradient(250px circle at var(--mouse-x) var(--mouse-y),
+		rgba(0, 0, 0, 0.6),
+		transparent),
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  filter: invert(100%) opacity(10%) contrast(200%) brightness(100%);
   z-index: 3;
 }
 
 .card::after {
   background: radial-gradient(
-			600px circle at var(--mouse-x) var(--mouse-y),
-			rgba(255, 255, 255, 0.4),
+			500px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.5),
 			transparent 40%
 		);
   z-index: 1;
@@ -649,7 +654,8 @@ video {
   flex-grow: 1;
   flex-direction: column;
   border-radius: inherit;
-  background-color: var(--bg-color);
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 19 19 / var(--tw-bg-opacity));
   padding: 10px;
 }
 
@@ -850,17 +856,6 @@ p {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-95 {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.animate-\[\] {
-  -webkit-animation: ;
-          animation: ;
-}
-
 .animate-\[fadeIn_200ms_ease-in\] {
   -webkit-animation: fadeIn 200ms ease-in;
           animation: fadeIn 200ms ease-in;
@@ -977,6 +972,10 @@ p {
 .text-\[\#627077\] {
   --tw-text-opacity: 1;
   color: rgb(98 112 119 / var(--tw-text-opacity));
+}
+
+.opacity-75 {
+  opacity: 0.75;
 }
 
 .backdrop-blur-sm {

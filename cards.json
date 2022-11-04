@@ -1,0 +1,27 @@
+{ "cardsInfo":[
+    "card1": {
+        "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-10-180256-a-group-of-powertools-in-front-if-a-red-background.webp",
+        "title": "Great Powertools",
+        "desc": "They are soooo good. Buy these powertools now!"
+    },"card2":{
+        "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-13-095111-a-drawing-of-a-robot-hand-drawing-another-robots-hand.webp",
+        "title": "Two Nice Hands",
+        "desc": "These robotic hands are trying to touch each other!"
+    },"card3":{
+        "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-13-100103-an-abstract-concept-of-freedom-in-style-of-oil-painting-467.webp",
+        "title": "Fly to liberty",
+        "desc": "Look! It's flying towards the sun! It indicates freedom."
+    },"card4":{
+        "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-13-101350-black-human-figure-flying-around-in-concept-of-having-free-will.webp",
+        "title": "The Gentleman",
+        "desc": "Being mid-air must feel.. unnatural. at least for humans!"
+    },"card5":{
+        "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-13-103326-a-beautiful-sight-of-mt-fuji-landscape-far-sight-sakura-trees-water.webp",
+        "title": "Mt Fuji in it's glory",
+        "desc": "The landscape couldn't get any better! Love the sakura tree."
+    },"card6":{
+        "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-13-105851-golden-gate-bridge-drawn-in-matrix-rain-numbers.webp",
+        "title": "Golden Gate's Law",
+        "desc": "Is it made of gold? or numbers? We will never know."
+    }
+]}
