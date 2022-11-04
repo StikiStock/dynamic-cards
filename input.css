@@ -20,8 +20,8 @@
 	}
 
 	.card {
-    	transition: all 200ms ease-in-out 0s;
-		@apply h-[180px] md:h-[220px] lg:h-[260px] flex cursor-pointer relative flex-col rounded-[12px] bg-[rgba(255,255,255,0.12)]
+    	transition: transform 200ms ease-in-out 0s;
+		@apply h-[300px] flex cursor-pointer relative flex-col rounded-[12px] bg-[#ffffff1c]
 	}
 
 	.card:hover::before {
@@ -42,11 +42,12 @@
 		); */
 
 
-		background: radial-gradient(250px circle at var(--mouse-x) var(--mouse-y),
-		rgba(0, 0, 0, 0.6),
+		background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
+		rgba(0, 0, 0, 0.7),
 		transparent),
-		url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-		filter: invert(100%) opacity(10%) contrast(200%) brightness(100%);
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+		filter: opacity(10%) contrast(300%) brightness(100%) invert(100%);
+		
 
 
 		z-index: 3;
@@ -54,39 +55,43 @@
 
 	.card::after {
 		background: radial-gradient(
-			500px circle at var(--mouse-x) var(--mouse-y),
-			rgba(255, 255, 255, 0.5),
+			400px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.6),
 			transparent 40%
 		);
 		z-index: 1;
 	}
 
 	.card > .card-content {
-		@apply bg-[rgb(19,19,19)] rounded-[inherit] flex flex-col flex-grow-[1] inset-[1px] p-[10px] absolute z-[2]
+		@apply bg-[color:var(--bg-color)] rounded-[inherit] flex flex-col flex-grow-[1] inset-[1px] p-[10px] absolute z-[2]
 	}
 
 	.card-content-wrapper {
-		@apply flex flex-col justify-between w-full my-auto overflow-hidden gap-2 md:gap-5
+		@apply flex flex-col justify-between w-full h-full my-5 overflow-hidden items-center
 	}
 
 	.card-img {
-		@apply w-full max-w-[120px] md:max-w-[180px] lg:max-w-[240px] mx-auto
+		@apply max-w-[80%]
 	}
 
 	.card-desc {
-		@apply flex flex-row justify-center max-w-[80%] mx-auto -translate-x-[0px] md:-translate-x-[12px]
-	}
-
-	.card-icon {
-		@apply w-[16px] h-[16px] m-[0.1rem_0.5rem_0.5rem_0rem]
+		@apply flex flex-row justify-center max-w-[75%]
 	}
 
 	.card-desc-wrapper {
-		@apply  flex flex-col gap-1 w-fit
+		@apply  flex flex-col gap-1
+	}
+
+	.card-desc-logo {
+		@apply inline-block w-[14px] h-auto my-auto opacity-80
+	}
+
+	.card-title-wrapper {
+		@apply flex gap-2
 	}
 
 	.card-title {
-		@apply text-slate-300 opacity-60 font-['Title'] text-sm
+		@apply text-[#808486] opacity-60 font-['Title'] text-sm flex my-auto
 	}
 
 	.card-message {

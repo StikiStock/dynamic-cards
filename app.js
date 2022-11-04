@@ -14,12 +14,12 @@ document.getElementById("cards").onmousemove = e => {
 const x = document.querySelectorAll(['.card']);
 
 const Select = (id) => {
-    x[id].classList.add('opacity-75')
+    x[id].classList.add('translate-y-[2px]')
 }
 
 const clearQueue = () => {
     for (let i = 0; i < x.length; i++) {
-        x[i].classList.remove('opacity-75');
+        x[i].classList.remove('translate-y-[2px]');
     }
 }
 
@@ -47,19 +47,7 @@ const fourthCard = {
     desc: "Being mid-air must feel.. unnatural. at least for humans!"
 }
 
-const fifthCard = {
-    imgurl: "https://stiki.ir/util/blogpost/dalle-2022-09-13-103326-a-beautiful-sight-of-mt-fuji-landscape-far-sight-sakura-trees-water.webp",
-    title: "Mt Fuji in it's glory",
-    desc: "The landscape couldn't get any better! Love the sakura tree."
-}
-
-const sixthCard = {
-    imgurl: "https://stiki.ir/util/blogpost/dalle-2022-09-13-105851-golden-gate-bridge-drawn-in-matrix-rain-numbers.webp",
-    title: "Golden Gate's Law",
-    desc: "Is it made of gold? or numbers? We will never know."
-}
-
-const cardsOrder = [firstCard, secondCard, thirdCard, fourthCard, fifthCard, sixthCard]
+const cardsOrder = [firstCard, secondCard, thirdCard, fourthCard]
 
 for (let i = 0; i < x.length; i++) {
     x[i].addEventListener('click', () => {
@@ -86,7 +74,5 @@ const toggleDetails = (imgurl, title, desc) => {
 document.querySelector('#popUp').addEventListener('click', () => {
     popUpCard.classList.toggle('hidden')
     popUp.classList.toggle('hidden')
-    setTimeout(() => {
-        clearQueue();
-    }, 100);
+    clearQueue();
 })

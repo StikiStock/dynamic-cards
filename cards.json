@@ -1,4 +1,4 @@
-{ "cardsInfo":[
+{ "cardsInfo": {
     "card1": {
         "imgurl": "https://stiki.ir/util/blogpost/dalle-2022-09-10-180256-a-group-of-powertools-in-front-if-a-red-background.webp",
         "title": "Great Powertools",
@@ -24,4 +24,4 @@
         "title": "Golden Gate's Law",
         "desc": "Is it made of gold? or numbers? We will never know."
     }
-]}
+}}

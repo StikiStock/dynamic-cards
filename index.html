@@ -26,10 +26,7 @@
         font-family: "Desc";
         src: url(./util/fonts/Poppins-Regular.ttf);
       }
-    </style>
-
-    <script type="text/javascript" src="cards.json"></script>
-    <script defer src="./app.js"></script>
+    </style> 
 
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
@@ -38,99 +35,79 @@
     class="bg-[color:var(--bg-color)] p-0 m-0 w-full h-screen flex items-center justify-center"
   >
     <div
-      class="grid grid-cols-2 md:grid-cols-3 gap-[8px] w-[calc(100%-20px)] max-w-[916px] mx-[12px]"
+      class="grid grid-cols-2 gap-[8px] w-[calc(100%-20px)] max-w-[616px]"
       id="cards"
     >
-      <div class="card">
+      <div class="card" >
         <div class="card-content">
           <div class="card-content-wrapper">
             <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
             <div class="card-desc">
-              <img class="card-icon" src="util/img/svg/swords.svg" />
-
               <div class="card-desc-wrapper">
-                <div class="card-title">Title</div>
-                <p class="card-message">A Short Description</p>
+                <div class="card-title-wrapper">
+                  <img src="./util/img/svg/swords.svg" class="card-desc-logo" />
+                  <div class="card-title">Title</div>
+                </div>
+                <p class="card-message">
+                  A two-liner description that fits the box
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" >
         <div class="card-content">
           <div class="card-content-wrapper">
             <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
             <div class="card-desc">
-              <img class="card-icon" src="util/img/svg/swords.svg" />
-
               <div class="card-desc-wrapper">
-                <div class="card-title">Title</div>
-                <p class="card-message">A Short Description About Us.</p>
+                <div class="card-title-wrapper">
+                  <img src="./util/img/svg/swords.svg" class="card-desc-logo" />
+                  <div class="card-title">Title</div>
+                </div>
+                <p class="card-message">
+                  A two-liner description that fits the box 
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" >
         <div class="card-content">
           <div class="card-content-wrapper">
             <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
             <div class="card-desc">
-              <img class="card-icon" src="util/img/svg/swords.svg" />
-
               <div class="card-desc-wrapper">
-                <div class="card-title">Title</div>
-                <p class="card-message">A Short Description</p>
+                <div class="card-title-wrapper">
+                  <img src="./util/img/svg/swords.svg" class="card-desc-logo" />
+                  <div class="card-title">Title</div>
+                </div>
+                <p class="card-message">
+                  A two-liner description that fits the box 
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" >
         <div class="card-content">
           <div class="card-content-wrapper">
-            <img class="card-img" src="util/img/svg/shield_svgmap.webp" />
+            <img class="card-img" src="util/img/svg/lock_svgmap.webp" />
             <div class="card-desc">
-              <img class="card-icon" src="util/img/svg/swords.svg" />
-
               <div class="card-desc-wrapper">
-                <div class="card-title">Title</div>
-                <p class="card-message">A Short Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <div class="card-content-wrapper">
-            <img class="card-img" src="util/img/svg/shield_svgmap.webp" />
-            <div class="card-desc">
-              <img class="card-icon" src="util/img/svg/swords.svg" />
-
-              <div class="card-desc-wrapper">
-                <div class="card-title">Title</div>
-                <p class="card-message">A Short Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <div class="card-content-wrapper">
-            <img class="card-img" src="util/img/svg/shield_svgmap.webp" />
-            <div class="card-desc">
-              <img class="card-icon" src="util/img/svg/swords.svg" />
-
-              <div class="card-desc-wrapper">
-                <div class="card-title">Title</div>
-                <p class="card-message">A Short Description</p>
+                <div class="card-title-wrapper">
+                  <img src="./util/img/svg/swords.svg" class="card-desc-logo" />
+                  <div class="card-title">Title</div>
+                </div>
+                <p class="card-message">
+                  A two-liner description that fits the box 
+                </p>
               </div>
             </div>
           </div>
@@ -152,18 +129,25 @@
           id="popImg"
         />
         <div class="px-5 my-auto">
-          <div class="text-lg font-['Title'] text-[#76868f] my-2" id="popTitle">
-            
-          </div>
+          <div
+            class="text-lg font-['Title'] text-[#76868f] my-2"
+            id="popTitle"
+          ></div>
 
           <p
             class="text-sm font-['Desc'] text-[#627077] text-justify my-2 max-w-[280px] mx-auto"
             id="popDesc"
-          >
-
-          </p>
+          ></p>
         </div>
       </div>
     </div>
   </body>
+
+  <script type="text/javascript" src="./cards.json"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+  integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+  crossorigin="anonymous"></script> -->
+  <script defer src="./app.js"></script>
+
+
 </html>
