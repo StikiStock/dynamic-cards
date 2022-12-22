@@ -1,6 +1,8 @@
 # dynamic-cards
-A Webpage simulating Dynamic lights in form of a Store website.
+A webpage simulating dynamic lights in style of a store website.
 
 # Features
 - responsive
 - written in Tailwind
+- interactive Design
+- fps-friendly
