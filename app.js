@@ -1,7 +1,8 @@
-import data from "./cards.json" assert { type: "json" };
+import data from "./cards.json" with { type: "json" };
 const cardsInfo = data["allCards"]
+const cards = document.getElementsByClassName("card");
 document.getElementById("cards").onmousemove = e => {
-    for (const card of document.getElementsByClassName("card")) {
+    for (const card of cards) {
         const rect = card.getBoundingClientRect(),
             x = e.clientX - rect.left,
             y = e.clientY - rect.top;
