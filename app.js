@@ -24,13 +24,17 @@ const clearQueue = () => {
     }
 }
 
-for (let i = 0; i < x.length; i++) {
-    x[i].addEventListener('click', () => {
-        clearQueue(), Select(i), setTimeout(() => {
-            toggleDetails(cardsInfo[i].imgurl, cardsInfo[i].title, cardsInfo[i].desc)
-        }, 200);
-    })
-}
+document.getElementById('cards').addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    if (card) {
+        const i = Array.from(x).indexOf(card);
+        if (i > -1) {
+            clearQueue(), Select(i), setTimeout(() => {
+                toggleDetails(cardsInfo[i].imgurl, cardsInfo[i].title, cardsInfo[i].desc)
+            }, 200);
+        }
+    }
+})
 
 const popUp = document.querySelector('#popUp')
 const popUpCard = document.querySelector('#popUpCard')
