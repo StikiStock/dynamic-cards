@@ -14,14 +14,17 @@ document.getElementById("cards").onmousemove = e => {
 }
 
 const x = document.querySelectorAll(['.card']);
+let activeIndex = -1;
 
 const Select = (id) => {
     x[id].classList.add('translate-y-[2px]')
+    activeIndex = id;
 }
 
 const clearQueue = () => {
-    for (let i = 0; i < x.length; i++) {
-        x[i].classList.remove('translate-y-[2px]');
+    if (activeIndex !== -1 && x[activeIndex]) {
+        x[activeIndex].classList.remove('translate-y-[2px]');
+        activeIndex = -1;
     }
 }
 
