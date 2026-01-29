@@ -1,15 +1,36 @@
 import data from "./cards.json" assert { type: "json" };
 const cardsInfo = data["allCards"]
-document.getElementById("cards").onmousemove = e => {
-    for (const card of document.getElementsByClassName("card")) {
-        const rect = card.getBoundingClientRect(),
-            x = e.clientX - rect.left,
-            y = e.clientY - rect.top;
+const cards = document.getElementsByClassName("card");
+let ticking = false;
+let mouseX = 0;
+let mouseY = 0;
 
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
+document.getElementById("cards").onmousemove = e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const updates = [];
+            // Read phase
+            for (const card of cards) {
+                const rect = card.getBoundingClientRect();
+                updates.push({
+                    card,
+                    x: mouseX - rect.left,
+                    y: mouseY - rect.top
+                });
+            }
+
+            // Write phase
+            for (const update of updates) {
+                update.card.style.setProperty("--mouse-x", `${update.x}px`);
+                update.card.style.setProperty("--mouse-y", `${update.y}px`);
+            }
+            ticking = false;
+        });
+        ticking = true;
     }
-    ;
 }
 
 const x = document.querySelectorAll(['.card']);
